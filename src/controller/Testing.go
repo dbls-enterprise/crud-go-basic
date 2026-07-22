@@ -3,7 +3,7 @@ package controller
 import "github.com/gin-gonic/gin"
 
 func Testing(c *gin.Context) {
-    nickname 	:= 	c.Param("nickname")
+    nickname	:= c.Param("nickname")
     senha 		:= 	c.Param("senha")
 
     if nickname == "davidlaryssa" && senha == "abcd1234" {

@@ -33,12 +33,11 @@ func (r *RestErr) Error() string {
 // ----------------------------
 
 // erro 400 - requisição inválida
-func NewBadRequestValidationError(message string, causes []Causes) *RestErr {
+func NewBadRequestValidationError(message string, err string, code int) *RestErr {
 	return &RestErr{
 		Message: message,
 		Err:     "bad_request",
 		Code:    http.StatusBadRequest,
-		Causes:  causes,
 	}
 }
 

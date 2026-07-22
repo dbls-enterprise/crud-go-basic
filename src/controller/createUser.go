@@ -1,16 +1,16 @@
 package controller
 
 import (
-	"github.com/gin-gonic/gin"
 	"github.com/dbls-enterprise/crud-go-basic/src/configuration/rest_err"
+	"github.com/gin-gonic/gin"
 )
 
 func CreateUser(c *gin.Context) {
-	err := rest_err.NewRestErr("error creating user", "internal_server_error", 500, nil)
-	c.JSON(err.Code, err)
+	restErr := rest_err.NewBadRequestValidationError(
+		"Chamou a rota da forma errada.",
+		"bad_request",
+		400,
+	)
 
-	if err != nil {
-		c.JSON(err.Code, err)
-		return
-	}
+	c.JSON(restErr.Code, restErr)
 }

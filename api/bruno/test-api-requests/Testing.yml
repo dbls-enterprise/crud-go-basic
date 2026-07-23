@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: http://localhost:8080/Testing/davidlaryssa/abcd1234
+  url: http://localhost:8080/Testing
   auth: inherit
 
 settings:
@@ -13,4 +13,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-  
+​

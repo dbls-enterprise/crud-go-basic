@@ -9,32 +9,43 @@ C:.
 │   LICENSE
 │   main.go
 │   README.md
-│   
+│
 ├───api
 │   └───bruno
 │       │   instruction.md
-│       │   
-│       └───test-api-requests
-│               createUser.yml
-│               findUser.yml
-│               opencollection.yml
-│               Testing.yml
-│               
+│       │
+│       ├───test-api-requests
+│       │       createUser.yml
+│       │       findUser.yml
+│       │       opencollection.yml
+│       │       Testing.yml
+│       │
+│       └───testing
+│               routes.go
+│               routes_test.go
+│               test.go
+│
 └───src
     ├───configuration
     │   └───rest_err
     │           rest_err.go
-    │           
+    │
     ├───controller
     │   │   createUser.go
     │   │   deleteUser.go
     │   │   findUser.go
-    │   │   Testing.go
     │   │   updateUser.go
-    │   │   
+    │   │
+    │   ├───model
+    │   │   ├───request
+    │   │   │       user_request.go
+    │   │   │
+    │   │   └───response
+    │   │           user_response.go
+    │   │
     │   └───routes
     │           routes.go
-    │           
+    │
     ├───model
     ├───test
     └───view

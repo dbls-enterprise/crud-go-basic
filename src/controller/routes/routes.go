@@ -12,5 +12,7 @@ func InitRoutes(r *gin.RouterGroup) {
 	r.POST("/createUser", controller.CreateUser)
 	r.PUT("/updateUser/:userId", controller.UpdateUser)
 	r.DELETE("/deleteUser/:userId", controller.DeleteUser)
-	brunotesting.InitRoutes(r)
+
+	// testes isolados para implementações futuras
+	brunotesting.InitRoutes(r) // Adiciona as rotas de teste do pacote brunotesting
 }

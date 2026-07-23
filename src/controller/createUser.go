@@ -6,11 +6,11 @@ import (
 )
 
 func CreateUser(c *gin.Context) {
-	restErr := rest_err.NewBadRequestValidationError(
+	err := rest_err.NewBadRequestValidationError(
 		"Chamou a rota da forma errada.",
 		"bad_request",
 		400,
 	)
 
-	c.JSON(restErr.Code, restErr)
+	c.JSON(err.Code, err)
 }
